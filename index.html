@@ -1,0 +1,65 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+export default function HomePage() {
+  return (
+    <main className="min-h-screen bg-white text-gray-900 p-6">
+      <header className="text-center mb-12">
+        <h1 className="text-4xl font-bold mb-2">FF Microbiologia Aplicada</h1>
+        <p className="text-lg text-gray-600">
+          Soluções científicas em biossegurança e controle microbiológico.
+        </p>
+      </header>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-2">Quem Somos</h2>
+            <p className="text-gray-700">
+              Uma empresa nascida da paixão pelos fungos e da ciência aliada ao
+              empreendedorismo. Trabalhamos com diagnósticos microbiológicos e
+              consultorias sanitárias para garantir segurança e inovação nos
+              estabelecimentos.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-2">Serviços</h2>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Consultoria sanitária para empresas</li>
+              <li>Análises laboratoriais ambientais</li>
+              <li>Laudos técnicos personalizados</li>
+              <li>Selo de conformidade microbiológica</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mb-12">
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">Verificação de Selo</h2>
+            <p className="mb-4 text-gray-700">
+              Se deseja validar o selo de conformidade apresentado por algum
+              estabelecimento, acesse a página dedicada:
+            </p>
+            <Link href="/verificar-selo">
+              <Button className="bg-emerald-600 hover:bg-emerald-700">
+                Verificar Selo
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
+      </section>
+
+      <footer className="text-center text-gray-500 text-sm mt-12">
+        &copy; {new Date().getFullYear()} FF Microbiologia Aplicada. Todos os direitos reservados.
+      </footer>
+    </main>
+  );
+}
+
